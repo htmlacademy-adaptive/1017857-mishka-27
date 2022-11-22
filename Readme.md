@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Николай Новожилов](https://up.htmlacademy.ru/adaptive/27/user/1017857).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
 
 ---
 

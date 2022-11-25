@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML Academy: Мишка</title>
+    <title>Интернет-магазин милых штук ручной работы "Мишка"</title>
   </head>
   <body class="page__body">
     <header class="header">
@@ -16,7 +16,7 @@
         </a>
         <ul class="main-nav__site-nav site-nav">
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Каталог товаров</a>
+            <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="#">Вязание на заказ</a>
@@ -121,20 +121,20 @@
         <dl class="contacts__list">
           <div class="contacts__item">
             <dt class="contacts__term">e-mail:</dt>
-            <dt class="contacts__value">
+            <dd class="contacts__value">
               <a class="contacts__text contacts__text--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-            </dt>
+            </dd>
           </div>
           <div class="contacts__item">
             <dt class="contacts__term">адрес:</dt>
-            <dt class="contacts__value">
+            <dd class="contacts__value">
               <address class="contacts__text contacts__text--address">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</address>
-            </dt>
-          </div>
-          <div class="contacts__map">
-            <img class="contacts__img" src="img/content/map-mobile@1x.jpg" width="320" height="455" alt="Карта проезда до магазина Мишка">
+            </dd>
           </div>
         </dl>
+        <div class="contacts__map">
+          <img class="contacts__img" src="img/content/map-mobile@1x.jpg" width="320" height="455" alt="Карта проезда до магазина Мишка">
+        </div>
         <a class="contacts__button button button--primary" href="#">Напишите нам</a>
       </section>
     </main>
@@ -172,5 +172,23 @@
         </a>
       </div>
     </footer>
+    <div class="modal">
+      <p class="modal__title subtitle">Добавить в корзину</p>
+      <form class="modal__form order-form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset class="order-form__size">
+          <legend class="order-form__caption">Выберите размер:</legend>
+          <label class="order-form__label" for="size-s">S
+            <input class="order-form__input" type="radio" id="size-s" name="size" value="s" checked>
+          </label>
+          <label class="order-form__label" for="size-m">M
+            <input class="order-form__input" type="radio" id="size-m" name="size" value="m">
+          </label>
+          <label class="order-form__label" for="size-l">L
+            <input class="order-form__input" type="radio" id="size-l" name="size" value="l">
+          </label>
+        </fieldset>
+        <button class="order__button button button--secondary" type="submit">Добавить</button>
+      </form>
+    </div>
   </body>
 </html>

@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.social__link {
+  display: flex;
+  width: 30px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-color);
+  text-decoration: none;
+}

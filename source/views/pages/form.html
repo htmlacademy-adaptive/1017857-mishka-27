@@ -1,91 +1,84 @@
 {% extends "../templates/layout.html" %}
+{% block pageName %}Вязание на заказ{% endblock %}
 {% block content %}
-  <main class="main">
-    <header class="main__header">
-      <h1 class="main__title title">Вязание на заказ</h1>
-    </header>
-    <form class="main__form order-form" action="https://echo.htmlacademy.ru/courses" method="post">
-      <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <fieldset class="order-form__field-set radio-set">
-        <legend class="radio-set__caption">Тип</legend>
-        <label class="radio-set__item radio">
-          <input class="radio__input" type="radio" id="accessory" name="type" value="accessory" checked>
-          <span class="radio__label">Аксессуар для интерьера</span>
-        </label>
-        <label class="radio-set__item radio">
-          <input class="radio__input" type="radio" id="toy" name="type" value="toy">
-          <span class="radio__label">Детская игрушка</span>
-        </label>
-      </fieldset>
-      <fieldset class="order-form__field-set check-set">
-        <legend class="check-set__caption">Цвет</legend>
-        <label class="check-set__item check">
-          <input class="check__input" type="checkbox" id="white" name="white" checked>
-          <span class="check__label">Белый</span>
-        </label>
-        <label class="check-set__item check">
-          <input class="check__input" type="checkbox" id="grey" name="grey" checked>
-          <span class="check__label">Серый</span>
-        </label>
-        <label class="check-set__item check">
-          <input class="check__input" type="checkbox" id="tiffany" name="tiffany">
-          <span class="check__label">Тиффани</span>
-        </label>
-        <label class="check-set__item check">
-          <input class="check__input" type="checkbox" id="black" name="black">
-          <span class="check__label">Черный</span>
-        </label>
-        <label class="check-set__item check">
-          <input class="check__input" type="checkbox" id="pink" name="pink">
-          <span class="check__label">Розовый</span>
-        </label>
-        <label class="check-set__item check">
-          <input class="check__input" type="checkbox" id="color" name="orange">
-          <span class="check__label">Оранжевый</span>
-        </label>
-      </fieldset>
-      <fieldset class="order-form__field-set input-set">
-        <legend class="input-set__caption">ФИО</legend>
-        <div class="input-set__item input">
-          <label class="input__label" for="firstname">Имя:</label>
-          <input class="input__input" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя*" required>
-        </div>
-        <div class="input-set__item input">
-          <label class="input__label" for="surname">Фамилия:</label>
-          <input class="input__input" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
-        </div>
-        <div class="input-set__item input">
-          <label class="input__label" for="patronymic">Отчество:</label>
-          <input class="input__input" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
-        </div>
-      </fieldset>
-      <fieldset class="order-form__field-set input-set">
-        <legend class="input-set__caption">Тел</legend>
-        <label class="visually-hidden" for="phone">Телефон:</label>
-        <div class="input-set__item input">
-          <input class="input__input" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-          <svg class="input__icon input__icon--phone" width="25" height="24" viewBox="0 0 25 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.44 24h-1.1a17.63 17.63 0 0 1-11.2-5.73A18.8 18.8 0 0 1 0 6.72V5.33c.1-.89.5-1.48 1.1-2.07.61-.7 1.62-1.48 2.53-1.58.7 0 1.81.5 2.22 1.09.4.49.6 1.58.8 2.37.2.88.6 1.97.5 2.76-.2 1.19-1.8 1.68-2.21 2.57a16.4 16.4 0 0 0 7.56 8.2c.8-.5 1.61-1.88 2.82-1.88.4 0 1.01.2 1.41.3.5.1.91.3 1.31.49.71.3 2.02.6 2.42 1.19.4.59.7 1.58.6 2.17-.3 1.28-2.41 2.66-3.62 3.06ZM12.6 1.48A10.8 10.8 0 0 1 23.5 12.15H25C25 5.43 19.46 0 12.6 0v1.48Z" fill="#000"/><path d="M12.6 9.19v1.58c.8 0 1.41.59 1.41 1.38h1.62a3 3 0 0 0-3.03-2.96ZM12.6 6.12a6.11 6.11 0 0 1 6.15 6.03h1.61c0-4.15-3.42-7.5-7.66-7.5v1.47h-.1Z"/>
-          </svg>
-        </div>
-      </fieldset>
-      <fieldset class="order-form__field-set input-set">
-        <legend class="input-set__caption">E-mail</legend>
-        <label class="visually-hidden" for="email">E-mail:</label>
-        <div class="input-set__item input">
-          <input class="input__input" type="email" name="email" id="email" placeholder="Ваш Email*">
-          <svg class="input__icon input__icon--email" width="32" height="21" viewBox="0 0 32 21" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-            <path d="M28 0H4C1.8 0 0 1.8 0 4v13c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4ZM2 5.3l7 5.3-7 5.3V5.3ZM30 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2l7.8-5.9 4.4 3.3a3 3 0 0 0 3.6 0l4.4-3.3L30 17Zm0-1.2-7-5.3 7-5.3v10.6Zm-12.8-2.2c-.4.3-.8.4-1.2.4-.4 0-.9-.1-1.2-.4l-4.1-3.1-.8-.6L2 4c0-1.1.9-2 2-2h24a2 2 0 0 1 2 2l-12.8 9.6Z"/>
-          </svg>
-        </div>
-      </fieldset>
-      <fieldset class="order-form__field-set message">
-        <legend class="message__caption">Доп</legend>
-        <label class="visually-hidden" for="message">Сообщение:</label>
-        <textarea class="message__text" id="message" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-      </fieldset>
-      <p class="order-form__caption">*Поля обязательны для заполнения</p>
-      <button class="order-form__button button button--primary" type="submit">Отправить заказ</button>
-    </form>
-  </main>
+<main class="main">
+  <h1 class="main__title title">Вязание на заказ</h1>
+  <form class="main__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+    <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <fieldset class="form__field-set form__field-set--radio">
+      <legend class="form__caption">Тип</legend>
+      <label class="form__item">
+        <input class="visually-hidden form__input-radio" type="radio" id="accessory" name="type" value="accessory" checked>
+        <span class="form__label form__label--radio">Аксессуар для интерьера</span>
+      </label>
+      <label class="form__item">
+        <input class="visually-hidden form__input-radio" type="radio" id="toy" name="type" value="toy">
+        <span class="form__label form__label--radio">Детская игрушка</span>
+      </label>
+    </fieldset>
+    <fieldset class="form__field-set form__field-set--check">
+      <legend class="form__caption">Цвет</legend>
+      <label class="form__item">
+        <input class="visually-hidden form__input-check" type="checkbox" id="white" name="white" checked>
+        <span class="form__label form__label--check">Белый</span>
+      </label>
+      <label class="form__item">
+        <input class="visually-hidden form__input-check" type="checkbox" id="grey" name="grey" checked>
+        <span class="form__label form__label--check">Серый</span>
+      </label>
+      <label class="form__item">
+        <input class="visually-hidden form__input-check" type="checkbox" id="tiffany" name="tiffany">
+        <span class="form__label form__label--check">Тиффани</span>
+      </label>
+      <label class="form__item">
+        <input class="visually-hidden form__input-check" type="checkbox" id="black" name="black">
+        <span class="form__label form__label--check">Черный</span>
+      </label>
+      <label class="form__item">
+        <input class="visually-hidden form__input-check" type="checkbox" id="pink" name="pink">
+        <span class="form__label form__label--check">Розовый</span>
+      </label>
+      <label class="form__item">
+        <input class="visually-hidden form__input-check" type="checkbox" id="color" name="orange">
+        <span class="form__label form__label--check">Оранжевый</span>
+      </label>
+    </fieldset>
+    <fieldset class="form__field-set">
+      <legend class="form__caption">ФИО</legend>
+      <div class="form__item-wrapper">
+        <label class="form__label" for="firstname">Имя:</label>
+        <input class="form__input-text" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя*" required>
+      </div>
+      <div class="form__item-wrapper">
+        <label class="form__label" for="surname">Фамилия:</label>
+        <input class="form__input-text" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
+      </div>
+      <div class="form__item-wrapper">
+        <label class="form__label" for="patronymic">Отчество:</label>
+        <input class="form__input-text" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+      </div>
+    </fieldset>
+    <fieldset class="form__field-set">
+      <legend class="form__caption">Тел</legend>
+      <label class="visually-hidden" for="phone">Телефон:</label>
+      <div class="form__item-wrapper form__item-wrapper--phone">
+        <input class="form__input-text" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+      </div>
+    </fieldset>
+    <fieldset class="form__field-set">
+      <legend class="form__caption">E-mail</legend>
+      <label class="visually-hidden" for="email">E-mail:</label>
+      <div class="form__item-wrapper form__item-wrapper--email">
+        <input class="form__input-text" type="email" name="email" id="email" placeholder="Ваш Email*">
+      </div>
+    </fieldset>
+    <fieldset class="form__field-set">
+      <legend class="form__caption">Доп</legend>
+      <label class="visually-hidden" for="message">Сообщение:</label>
+      <textarea class="form__input-textarea" id="message" name="message" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+    </fieldset>
+    <p class="form__text">*Поля обязательны для заполнения</p>
+    <button class="form__button button button--primary" type="submit">Отправить заказ</button>
+  </form>
+</main>
 {% endblock %}

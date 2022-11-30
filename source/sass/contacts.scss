@@ -1,0 +1,63 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.contacts__list {
+  margin: 0 30px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacts__item {
+  display: flex;
+  gap: 15px;
+}
+
+.contacts__term {
+  font-size: 14px;
+  min-width: 60px;
+}
+
+.contacts__value {
+  font-size: 14px;
+  margin-left: 0;
+}
+
+.contacts__text {
+  color: var(--text-body);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contacts__map {
+  margin-bottom: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url("../img/common/map-pin.svg");
+  }
+}
+
+.contacts__img {
+  display: block;
+}

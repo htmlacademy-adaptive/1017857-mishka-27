@@ -1,0 +1,62 @@
+.hero {
+  background-color: var(--no-image-color);
+  background-image: url("../img/common/hero-mobile@1x.jpg");
+  background-position-y: -20px;
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text-color);
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 70px 30px 120px;
+}
+
+.hero__item {
+  &--light {
+    background-color: #63d1bb;
+  }
+
+  &--dark {
+    background-color: #56c3b2;
+  }
+}
+
+.hero__link {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text-color-light);
+  text-decoration: none;
+
+  display: grid;
+  grid-template-columns: 1fr 62px;
+  column-gap: 30px;
+  align-items: center;
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 62px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0.5;
+  }
+
+  &--interior::after {
+    background-image: url("../img/common/interior.svg");
+  }
+
+  &--toy::after {
+    background-image: url("../img/common/toy.svg");
+  }
+}

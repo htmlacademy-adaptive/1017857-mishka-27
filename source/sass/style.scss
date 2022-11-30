@@ -1,1 +1,34 @@
-// Начните писать стили здесь
+@use "variables";
+@use "fonts";
+@use "general";
+@use "button";
+
+//HEADER
+@use "main-nav";
+@use "site-nav";
+@use "search";
+@use "additional-nav";
+
+//INDEX
+@use "main";
+@use "hero";
+@use "product";
+@use "about";
+@use "reviews";
+@use "contacts";
+
+//CATALOG
+@use "product-list";
+@use "card";
+@use "video";
+
+//FORM
+@use "form";
+
+//FOOTER
+@use "footer";
+@use "social";
+@use "copyright";
+
+//MODAL
+@use "modal";

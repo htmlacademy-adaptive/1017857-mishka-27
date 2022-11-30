@@ -1,0 +1,27 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.copyright__text {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.copyright__logo {
+  fill: var(--accent-color);
+}

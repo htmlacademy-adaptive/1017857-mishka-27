@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.footer__logo {
+  display: none;
+}

@@ -1,0 +1,14 @@
+{% extends "../templates/layout.html" %}
+{% block pageName %}Главная{% endblock %}
+{% block content %}
+<main class="main">
+{% include "../templates/hero.html" %}
+{% include "../templates/product.html" %}
+{% include "../templates/about.html" %}
+{% include "../templates/reviews.html" %}
+{% include "../templates/contacts.html" %}
+</main>
+{% endblock %}
+{% block modal %}
+{% include "../templates/modal.html" %}
+{% endblock %}

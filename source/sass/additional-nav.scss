@@ -1,0 +1,14 @@
+.additional-nav {
+  display: none;
+
+  list-style: none;
+  padding-left: 0;
+}
+
+.additional-nav__lnk {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text-color);
+  text-decoration: none;
+}

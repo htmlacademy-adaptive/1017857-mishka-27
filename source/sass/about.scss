@@ -1,0 +1,35 @@
+.about {
+  padding: 30px;
+}
+
+.about__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.about__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  padding-left: 0;
+}
+
+.about__item {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 47px;
+    height: 47px;
+    background-color: var(--accent-color);
+  }
+}

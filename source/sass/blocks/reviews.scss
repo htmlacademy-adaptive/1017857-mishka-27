@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .reviews {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,8 @@
 }
 
 .reviews__title {
+  @include mixins.subtitle;
+
   margin-top: 0;
   margin-bottom: 15px;
 }

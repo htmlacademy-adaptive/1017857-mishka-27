@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .product {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,7 @@
 }
 
 .product__title {
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 25px;
-  color: var(--text-color);
+  @include mixins.subtitle;
 
   margin-top: 0;
   margin-bottom: 3px;

@@ -1,0 +1,13 @@
+@mixin title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text-color);
+}
+
+@mixin subtitle {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text-color);
+}

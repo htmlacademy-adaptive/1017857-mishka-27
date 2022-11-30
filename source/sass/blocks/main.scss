@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,7 @@
 }
 
 .main__title {
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  color: var(--text-color);
+  @include mixins.title;
   text-align: center;
   background-color: var(--bg-color);
 

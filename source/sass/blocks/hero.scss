@@ -3,14 +3,14 @@
 .hero {
   display: grid;
   background-color: var(--no-image-color);
-  background-image: url("../../img/common/hero-mobile@1x.jpg");
+  background-image: url("../img/common/hero-mobile@1x.jpg");
   background-position: 50% -25px;
   background-repeat: no-repeat;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
 
-    background-image: url("../../img/common/hero-desktop.jpg");
+    background-image: url("../img/common/hero-desktop.jpg");
     background-position-y: -50px;
   }
 
@@ -22,7 +22,7 @@
       bottom: -20px;
       height: 24px;
       width: 100%;
-      background-image: url("../../img/common/zigzag-fill-desktop.svg");
+      background-image: url("../img/common/zigzag-fill-desktop.svg");
     }
 
     @media (min-width: 1150px) {
@@ -110,10 +110,10 @@
   }
 
   &--interior::after {
-    background-image: url("../../img/common/interior.svg");
+    background-image: url("../img/common/interior.svg");
   }
 
   &--toy::after {
-    background-image: url("../../img/common/toy.svg");
+    background-image: url("../img/common/toy.svg");
   }
 }

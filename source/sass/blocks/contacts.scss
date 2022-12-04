@@ -44,7 +44,7 @@
     display: none;
     width: 47px;
     height: 80px;
-    background-image: url("../../img/common/flag.svg");
+    background-image: url("../img/common/flag.svg");
 
     @media (min-width: 768px) {
       display: block;
@@ -108,7 +108,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-image: url("../../img/common/map-pin.svg");
+    background-image: url("../img/common/map-pin.svg");
   }
 }
 

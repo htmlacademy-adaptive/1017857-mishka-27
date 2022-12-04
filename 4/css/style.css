@@ -395,14 +395,14 @@ img {
 .hero {
   display: grid;
   background-color: var(--no-image-color);
-  background-image: url("../../img/common/hero-mobile@1x.jpg");
+  background-image: url("../img/common/hero-mobile@1x.jpg");
   background-position: 50% -25px;
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
   .hero {
     grid-template-columns: 1fr 1fr;
-    background-image: url("../../img/common/hero-desktop.jpg");
+    background-image: url("../img/common/hero-desktop.jpg");
     background-position-y: -50px;
   }
 }
@@ -414,7 +414,7 @@ img {
     bottom: -20px;
     height: 24px;
     width: 100%;
-    background-image: url("../../img/common/zigzag-fill-desktop.svg");
+    background-image: url("../img/common/zigzag-fill-desktop.svg");
   }
 }
 @media (min-width: 1150px) {
@@ -510,10 +510,10 @@ img {
   margin-bottom: 20px;
 }
 .hero__link--interior::after {
-  background-image: url("../../img/common/interior.svg");
+  background-image: url("../img/common/interior.svg");
 }
 .hero__link--toy::after {
-  background-image: url("../../img/common/toy.svg");
+  background-image: url("../img/common/toy.svg");
 }
 
 .product {
@@ -800,7 +800,7 @@ img {
   .reviews {
     padding-left: 50px;
     padding-right: 50px;
-    background-image: url(../../img/common/review.jpg);
+    background-image: url("../img/common/review.jpg");
     background-position-x: 0;
     background-repeat: no-repeat;
   }
@@ -991,7 +991,7 @@ img {
   display: none;
   width: 47px;
   height: 80px;
-  background-image: url("../../img/common/flag.svg");
+  background-image: url("../img/common/flag.svg");
 }
 @media (min-width: 768px) {
   .contacts__title::after {
@@ -1057,7 +1057,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("../../img/common/map-pin.svg");
+  background-image: url("../img/common/map-pin.svg");
 }
 
 .contacts__img {
@@ -1249,7 +1249,7 @@ img {
   display: block;
   width: 32px;
   height: 22px;
-  background-image: url("../../img/common/video.svg");
+  background-image: url("../img/common/video.svg");
 }
 
 .video__wrapper {
@@ -1514,7 +1514,7 @@ img {
   top: 50%;
   left: 21px;
   transform: translate(-50%, -50%);
-  background-image: url("../../img/icons/tick.svg");
+  background-image: url("../img/icons/tick.svg");
   background-position: 50% 50%;
 }
 

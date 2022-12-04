@@ -6,10 +6,15 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  box-sizing: border-box;
 
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
 
   &--primary {
     border: 2px solid var(--text-body);

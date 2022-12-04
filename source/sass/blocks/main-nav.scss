@@ -1,0 +1,130 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr min-content max-content;
+  }
+
+  @media (min-width: 1150px) {
+    grid-template-columns: 43% 1fr 82px auto;
+  }
+}
+
+.main-nav--closed .site-nav,
+.main-nav--closed .search,
+.main-nav--closed .main-nav__cart {
+  display: none;
+}
+
+.main-nav__toggle {
+  border: none;
+  background-color: #cccccc;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: 768px) {
+    grid-column: 1/2;
+    justify-content: start;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 2/3;
+    justify-content: start;
+  }
+}
+
+.main-nav__site-nav {
+  @media (min-width: 768px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.main-nav__search {
+  @media (min-width: 768px) {
+    grid-column: 2/3;
+    justify-self: center;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 3/4;
+  }
+}
+
+.main-nav__cart {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text-color);
+  text-decoration: none;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: 768px) {
+    grid-column: 3/4;
+    justify-self: end;
+    align-self: center;
+    padding-left: 85px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 4/5;
+  }
+}
+
+.main-nav__caption {
+  display: none;
+
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-body);
+
+  @media (min-width: 768px) {
+    display: block;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: end;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 4/5;
+  }
+}
+
+.main-nav__additional-nav {
+  @media (min-width: 1150px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}

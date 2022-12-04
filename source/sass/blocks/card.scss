@@ -1,10 +1,24 @@
 .card {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1150px) {
+    display: flex;
+
+  }
 }
 
 .card__title {
   margin: 25px;
+
+  @media (min-width: 768px) {
+    grid-column: 2/3;
+  }
 }
 
 .card__link {
@@ -16,6 +30,11 @@
 
   display: block;
 
+  @media (min-width: 768px) {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+
   &--img {
     order: -1;
   }
@@ -23,10 +42,19 @@
 
 .card__img {
   display: block;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    height: 343px;
+  }
 }
 
 .card__description {
   margin: 0 25px 15px;
+
+  @media (min-width: 768px) {
+    grid-column: 2/3;
+  }
 }
 
 .card__bottom {
@@ -37,6 +65,10 @@
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  @media (min-width: 768px) {
+    grid-column: 2/3;
+  }
 }
 
 .card__price {

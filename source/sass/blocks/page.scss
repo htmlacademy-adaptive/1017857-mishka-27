@@ -12,7 +12,16 @@
 }
 
 .page__body {
-  max-width: 320px;
-  margin: 0 auto;
-  background-color: var(--bg);
+  min-width: 320px;
+  margin: 0;
+}
+
+.page__header {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: 768px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

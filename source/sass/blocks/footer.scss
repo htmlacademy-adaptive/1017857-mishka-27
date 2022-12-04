@@ -5,8 +5,20 @@
 
   padding-left: 30px;
   padding-right: 30px;
+
+  @media (min-width: 768px) {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
   display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 }

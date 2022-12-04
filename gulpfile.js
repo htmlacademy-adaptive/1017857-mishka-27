@@ -25,7 +25,10 @@ export const views = () => {
   return gulp.src('source/views/pages/*.html')
     .pipe(plumber())
     .pipe(nunjucksRender({
-      path: ['source/views/templates/']
+      path: ['source/views/templates/'],
+      envOptions: {
+        autoescape: false
+      },
     }))
     .pipe(gulp.dest('source'))
     .pipe(browser.stream());

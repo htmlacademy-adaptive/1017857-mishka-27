@@ -1,29 +1,85 @@
 @use "../mixins";
 
 .hero {
+  display: grid;
   background-color: var(--no-image-color);
   background-image: url("../../img/common/hero-mobile@1x.jpg");
-  background-position-y: -20px;
+  background-position: 50% -25px;
   background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+
+    background-image: url("../../img/common/hero-desktop.jpg");
+    background-position-y: -50px;
+  }
+
+  &::after {
+    @media (min-width: 768px) {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -20px;
+      height: 24px;
+      width: 100%;
+      background-image: url("../../img/common/zigzag-fill-desktop.svg");
+    }
+
+    @media (min-width: 1150px) {
+      height: 34px;
+    }
+  }
 }
 
 .hero__title {
   @include mixins.title;
   text-align: center;
 
+  justify-self: center;
+  box-sizing: border-box;
   margin-top: 0;
   margin-bottom: 0;
   padding: 70px 30px 120px;
+  min-height: 280px;
+
+  @media (min-width: 768px) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+
+
+    max-width: 700px;
+    padding-top: 90px;
+    min-height: 560px;
+  }
 }
 
 .hero__item {
   &--light {
     background-color: #63d1bb;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @media (min-width: 768px) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin-left: 50px;
+      margin-right: 0;
+    }
   }
 
   &--dark {
     background-color: #56c3b2;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @media (min-width: 768px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin-right: 50px;
+      margin-left: 0;
+    }
   }
+
 }
 
 .hero__link {
@@ -49,6 +105,8 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   &--interior::after {

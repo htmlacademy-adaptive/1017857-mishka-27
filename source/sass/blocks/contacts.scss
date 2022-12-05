@@ -1,0 +1,136 @@
+@use "../mixins";
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: 1150px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contacts__wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: 768px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-right: 0;
+  }
+}
+
+.contacts__title {
+  @include mixins.subtitle;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 1150px) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &::after{
+    content: "";
+    display: none;
+    width: 47px;
+    height: 80px;
+    background-image: url("../img/common/flag.svg");
+
+    @media (min-width: 768px) {
+      display: block;
+      grid-column: 1/2;
+    }
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1150px) {
+    flex-direction: column;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  gap: 15px;
+}
+
+.contacts__term {
+  font-size: 14px;
+  min-width: 60px;
+}
+
+.contacts__value {
+  font-size: 14px;
+  margin-left: 0;
+}
+
+.contacts__text {
+  color: var(--text-body);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contacts__map {
+  margin-bottom: 40px;
+  position: relative;
+
+  @media (min-width: 1150px) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url("../img/common/map-pin.svg");
+  }
+}
+
+.contacts__img {
+  display: block;
+  width: 100%;
+  height: 454px;
+}
+
+.contacts__button {
+  margin-left: 30px;
+  margin-right: 30px;
+
+  @media (min-width: 768px) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-right: 0;
+    align-self: end;
+  }
+}

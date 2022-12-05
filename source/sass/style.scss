@@ -1,34 +1,37 @@
 @use "variables";
 @use "fonts";
 @use "general";
-@use "button";
+@use "blocks/visually-hidden";
+@use "blocks/page";
+@use "blocks/button";
 
 //HEADER
-@use "main-nav";
-@use "site-nav";
-@use "search";
-@use "additional-nav";
+@use "blocks/header";
+@use "blocks/main-nav";
+@use "blocks/site-nav";
+@use "blocks/search";
+@use "blocks/additional-nav";
 
 //INDEX
-@use "main";
-@use "hero";
-@use "product";
-@use "about";
-@use "reviews";
-@use "contacts";
+@use "blocks/main";
+@use "blocks/hero";
+@use "blocks/product";
+@use "blocks/about";
+@use "blocks/reviews";
+@use "blocks/contacts";
 
 //CATALOG
-@use "product-list";
-@use "card";
-@use "video";
+@use "blocks/product-list";
+@use "blocks/card";
+@use "blocks/video";
 
 //FORM
-@use "form";
+@use "blocks/form";
 
 //FOOTER
-@use "footer";
-@use "social";
-@use "copyright";
+@use "blocks/footer";
+@use "blocks/social";
+@use "blocks/copyright";
 
 //MODAL
-@use "modal";
+@use "blocks/modal";

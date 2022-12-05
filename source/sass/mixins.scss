@@ -1,0 +1,33 @@
+@mixin title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text-color);
+
+  @media (min-width: 768px) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+@mixin subtitle {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text-color);
+
+  @media (min-width: 768px) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

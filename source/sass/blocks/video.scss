@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .video {
   display: flex;
   flex-direction: column;
@@ -7,12 +9,12 @@
   padding-top: 30px;
   padding-bottom: 60px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding-left: 50px;
     padding-right: 50px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }
@@ -31,12 +33,12 @@
   padding-bottom: 30px;
   margin: 0 25px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     grid-column: 5/7;
     margin-left: 60px;
     margin-right: 60px;
@@ -59,14 +61,14 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     order: -1;
     margin-bottom: 0;
   }
 
-  @media (min-width: 1150px) {
-    grid-column: 1/5;
-    grid-row: 1/4;
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
   }
 }
 
@@ -94,12 +96,12 @@
   margin-left: 25px;
   margin-right: 25px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     grid-column: 5/7;
     margin-left: 60px;
     margin-right: 60px;
@@ -111,12 +113,12 @@
   margin-left: 25px;
   margin-right: 25px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     grid-column: 5/7;
     align-self: end;
     margin-bottom: 0;

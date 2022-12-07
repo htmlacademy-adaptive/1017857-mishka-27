@@ -1,7 +1,13 @@
+@use "../breakpoints" as *;
+
 .search {
   display: flex;
   align-items: center;
   gap: 25px;
+}
+
+.main-nav--closed .search {
+  display: none;
 }
 
 .search__label {
@@ -13,13 +19,13 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
 .search__icon {
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 36px;

@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .additional-nav {
   display: none;
 
@@ -6,7 +8,7 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     display: flex;
     justify-content: start;
     gap: 62px;

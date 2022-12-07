@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .product-list {
   display: flex;
   flex-direction: column;
@@ -7,12 +9,12 @@
   padding-left: 30px;
   padding-top: 30px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding-left: 50px;
     padding-right: 50px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: center;
   }

@@ -1,23 +1,24 @@
+@use "../breakpoints" as *;
+
 .card {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     display: flex;
-
   }
 }
 
 .card__title {
   margin: 25px;
 
-  @media (min-width: 768px) {
-    grid-column: 2/3;
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
   }
 }
 
@@ -30,9 +31,9 @@
 
   display: block;
 
-  @media (min-width: 768px) {
-    grid-column: 1/2;
-    grid-row: 1/4;
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
   }
 
   &--img {
@@ -44,7 +45,7 @@
   display: block;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     height: 343px;
   }
 }
@@ -52,8 +53,8 @@
 .card__description {
   margin: 0 25px 15px;
 
-  @media (min-width: 768px) {
-    grid-column: 2/3;
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
   }
 }
 
@@ -66,8 +67,8 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  @media (min-width: 768px) {
-    grid-column: 2/3;
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
   }
 }
 

@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .site-nav {
   list-style: none;
 
@@ -7,15 +9,19 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: start;
     gap: 35px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     gap: 70px;
   }
+}
+
+.main-nav--closed .site-nav {
+  display: none;
 }
 
 .site-nav__item {
@@ -35,14 +41,14 @@
   padding-bottom: 32px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 15px;
     line-height: 24px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     font-size: 17px;
     padding-top: 32px;
     padding-bottom: 32px;

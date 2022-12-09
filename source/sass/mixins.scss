@@ -31,3 +31,17 @@
     line-height: 57px;
   }
 }
+
+@mixin padding-mobile {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin padding-tablet {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@mixin border-menu {
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}

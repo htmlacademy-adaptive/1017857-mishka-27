@@ -1,3 +1,4 @@
+@use "../mixins";
 @use "../breakpoints" as *;
 
 .main-nav {
@@ -5,6 +6,7 @@
   flex-direction: column;
   position: relative;
   margin: 0 auto;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -18,7 +20,10 @@
 
 .main-nav__toggle {
   border: none;
-  background-color: #cccccc;
+  background-image: url("../img/icons/menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
   width: 20px;
   height: 20px;
 
@@ -31,6 +36,14 @@
   }
 }
 
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../img/icons/burger-menu.svg");
+}
+
+.no-js .main-nav__toggle {
+  display: none;
+}
+
 .main-nav__logo {
   display: flex;
   justify-content: center;
@@ -38,7 +51,11 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
+  @include mixins.padding-mobile;
+  @include mixins.border-menu;
+
   @media (min-width: $tablet-width) {
+    @include mixins.padding-tablet;
     grid-column: 1 / 2;
     justify-content: start;
   }
@@ -73,15 +90,6 @@
 }
 
 .main-nav__cart {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
-  color: var(--text-color);
-  text-decoration: none;
-
-  padding-top: 25px;
-  padding-bottom: 25px;
-
   @media (min-width: $tablet-width) {
     grid-column: 3 / 4;
     justify-self: end;
@@ -96,9 +104,6 @@
   }
 }
 
-.main-nav--closed .main-nav__cart {
-  display: none;
-}
 
 .main-nav__caption {
   display: none;

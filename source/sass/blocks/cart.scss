@@ -1,21 +1,24 @@
 @use "../mixins";
 @use "../breakpoints" as *;
 
-.search {
+.cart {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text-color);
+  text-decoration: none;
+
   display: flex;
   align-items: center;
-  background-color: transparent;
-  border: none;
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 50px;
   padding-right: 25px;
   width: 260px;
-  box-sizing: content-box;
   position: relative;
 }
 
-.search__label {
+.cart__label {
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -24,23 +27,11 @@
 
   text-align: left;
   display: block;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
 }
 
-.search__icon {
+.cart__icon {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
-
-  @media (min-width: $tablet-width) {
-    padding: 36px 32px;
-  }
-}
-
-.search__popup {
-  display: none;
 }

@@ -2,28 +2,55 @@
 @use "../breakpoints" as *;
 
 .search {
+  @include mixins.border-menu;
+  @include mixins.padding-mobile;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    background-color: var(--bg);
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    justify-content: end;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 5 / 6;
+  }
+}
+
+.search__button {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 50px;
-  padding-right: 25px;
-  width: 260px;
-  box-sizing: content-box;
   position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 85px;
+    height: 85px;
+    padding-left: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 .search__label {
   font-size: 17px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 24px;
   color: var(--text-color);
-  width: 100%;
 
   text-align: left;
   display: block;
+  width: 215px;
+  padding-left: 45px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -37,7 +64,7 @@
   transform: translate(0, -50%);
 
   @media (min-width: $tablet-width) {
-    padding: 36px 32px;
+    position: relative;
   }
 }
 

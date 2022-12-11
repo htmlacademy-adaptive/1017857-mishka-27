@@ -8,25 +8,46 @@
   color: var(--text-color);
   text-decoration: none;
 
+  @include mixins.border-menu;
+  @include mixins.padding-mobile;
+
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 50px;
-  padding-right: 25px;
-  width: 260px;
-  position: relative;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    background-color: var(--bg);
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    padding-left: 0;
+    padding-right: 0;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 6 / 7;
+  }
 }
 
 .cart__label {
   font-size: 17px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 24px;
   color: var(--text-color);
-  width: 100%;
 
   text-align: left;
   display: block;
+  position: relative;
+  padding-left: 45px;
+  width: 215px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-left: 85px;
+    padding-right: 0;
+  }
 }
 
 .cart__icon {
@@ -34,4 +55,8 @@
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
+
+  @media (min-width: $tablet-width) {
+    left: 35px;
+  }
 }

@@ -1,9 +1,6 @@
 @use "../breakpoints" as *;
 
 .header {
-  background-color: var(--text-color-light);
-
-  @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, var(--bg), var(--bg) 90px, var(--bg-color) 90px, var(--bg-color) 100%);
-  }
+  min-height: 85px;
+  position: relative;
 }

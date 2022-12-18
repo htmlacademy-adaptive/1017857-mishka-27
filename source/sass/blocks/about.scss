@@ -5,13 +5,16 @@
   padding: 30px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 50px repeat(6, 1fr) 50px;
+    padding-top: 70px;
+    padding-bottom: 90px;
   }
 }
 
@@ -23,6 +26,12 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 6;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 7;
+    padding-bottom: 35px;
   }
 }
 
@@ -33,16 +42,21 @@
   gap: 30px;
 
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
-    gap: 0;
+    column-gap: 0;
+    row-gap: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2 / 6;
+    grid-column: 3 / 7;
+    row-gap: 60px;
   }
 }
 
@@ -58,18 +72,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 22px;
-  }
-
-  &:nth-child(odd) {
-    @media (min-width: $tablet-width) {
-      grid-column: 1 / 2;
-    }
-  }
-
-  &:nth-child(even) {
-    @media (min-width: $tablet-width) {
-      grid-column: 2 / 3;
-    }
+    padding-right: 40px;
   }
 
   &::before {
@@ -77,6 +80,31 @@
     display: block;
     width: 47px;
     height: 47px;
-    background-color: var(--accent-color);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--flower::before {
+    background-image: url("../img/icons/flower.svg");
+  }
+
+  &--rub::before {
+    background-image: url("../img/icons/rub.svg");
+  }
+
+  &--heart::before {
+    background-image: url("../img/icons/heart.svg");
+  }
+
+  &--threads::before {
+    background-image: url("../img/icons/threads.svg");
+  }
+
+  &--rocket::before {
+    background-image: url("../img/icons/rocket.svg");
+  }
+
+  &--present::before {
+    background-image: url("../img/icons/present.svg");
   }
 }

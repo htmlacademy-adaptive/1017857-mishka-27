@@ -5,9 +5,12 @@
   padding: 30px;
 
   @media (min-width: $tablet-width) {
+    display: grid;
     grid-template-columns: 50px repeat(4, 1fr) 50px;
     padding-top: 30px;
     padding-bottom: 80px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,7 +27,7 @@
   margin-top: 0;
   margin-bottom: 25px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     grid-column: 2 / 6;
     padding-bottom: 40px;
   }
@@ -46,6 +49,7 @@
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
+    grid-column: 2 / 6;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);

@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .social {
   display: flex;
   justify-content: center;
@@ -6,6 +8,11 @@
 
   padding-top: 25px;
   padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-footer);
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .social__link {

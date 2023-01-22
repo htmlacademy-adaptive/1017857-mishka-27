@@ -10,12 +10,16 @@
   padding-top: 30px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
+    grid-column: 2 / 3;
+    padding-top: 65px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 110px;
     flex-direction: row;
-    justify-content: center;
+    gap: 50px;
+    //justify-content: space-between;
   }
 }

@@ -3,22 +3,38 @@
 .card {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-light);
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(55px, min-content) 1fr auto;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    grid-template-columns: 25px 1fr 25px;
+    grid-template-rows: min-content;
   }
 }
 
 .card__title {
-  margin: 25px;
+  margin-top: 0;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 5px;
+  line-height: 24px;
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -36,8 +52,29 @@
     grid-row: 1 / 4;
   }
 
+  &--title {
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
   &--img {
     order: -1;
+    margin-bottom: 25px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
   }
 }
 
@@ -48,6 +85,10 @@
   @media (min-width: $tablet-width) {
     height: 343px;
   }
+
+  @media (min-width: $desktop-width) {
+    height: 462px;
+  }
 }
 
 .card__description {
@@ -55,6 +96,14 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
+    margin: 0 35px;
+
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -66,9 +115,18 @@
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  border-top: 1px solid var(--border-light);
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    align-self: end;
   }
 }
 
@@ -77,12 +135,19 @@
   font-weight: 700;
   line-height: 24px;
   color: var(--text-color);
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .card__button {
   display: block;
   width: 20px;
   height: 20px;
-  color: var(--accent-color);
+  color: var(--text-color);
   text-decoration: none;
+  opacity: 0.2;
+
+
 }

@@ -112,6 +112,7 @@
   grid-column: 1 / 4;
   margin-bottom: 40px;
   position: relative;
+  height: 455px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 7;
@@ -162,4 +163,8 @@
     grid-row: 2 / 3;
     align-self: end;
   }
+}
+
+iframe {
+  border: none;
 }

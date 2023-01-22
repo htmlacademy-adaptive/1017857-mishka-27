@@ -47,6 +47,12 @@
       grid-row: 1 / 2;
     }
   }
+
+  &--notindex {
+    @media (min-width: $tablet-width) {
+      background-color: var(--bg-color);
+    }
+  }
 }
 
 .main-nav__toggle {

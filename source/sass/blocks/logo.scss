@@ -1,0 +1,22 @@
+@use "../mixins";
+@use "../breakpoints" as *;
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include mixins.border-menu;
+
+  @media (min-width: $tablet-width) {
+    background-color: var(--bg);
+    justify-content: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
+    justify-content: center;
+  }
+}

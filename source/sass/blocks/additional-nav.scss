@@ -1,15 +1,16 @@
+@use "../breakpoints" as *;
+
 .additional-nav {
   display: none;
-
   list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: start;
-    gap: 62px;
+    gap: 60px;
+    grid-column: 2 / 4;
   }
 }
 

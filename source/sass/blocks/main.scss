@@ -1,9 +1,17 @@
 @use "../mixins";
+@use "../breakpoints" as *;
 
 .main {
   display: flex;
   flex-direction: column;
-  background-color: var(--text-color-light);
+  margin: 0 auto;
+
+  &--page {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 50px 1fr 50px;
+    }
+  }
 }
 
 .main__title {
@@ -15,4 +23,33 @@
   margin-bottom: 0;
   padding-top: 75px;
   padding-bottom: 75px;
+}
+
+.main--page .main__title {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 4;
+
+    display: grid;
+    line-height: 180px;
+    padding: 0;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+
+      align-self: end;
+      height: 24px;
+      background-image: url("../img/common/zigzag-fill-tablet.svg");
+      background-repeat: repeat-x;
+      background-position: 50% 13px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/common/zigzag-fill-desktop.svg");
+      height: 34px;
+      background-position-y: 19px;
+    }
+  }
 }

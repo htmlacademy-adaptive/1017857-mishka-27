@@ -1,28 +1,66 @@
+@use "../mixins";
+@use "../breakpoints" as *;
+
 .main-nav {
   display: flex;
-  flex-direction: column;
   position: relative;
-  margin: 0 auto;
+  flex-direction: column;
+  background-color: var(--bg);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr min-content max-content;
+    grid-template-columns: 50px 1fr 1fr 85px max-content 50px;
+    background-color: var(--bg-menu);
   }
 
-  @media (min-width: 1150px) {
-    grid-template-columns: 43% 1fr 82px auto;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 50px max-content max-content 1fr 85px max-content 50px;
   }
-}
 
-.main-nav--closed .site-nav,
-.main-nav--closed .search,
-.main-nav--closed .main-nav__cart {
-  display: none;
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      grid-column: 1 / 2;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg);
+
+      @include mixins.border-menu;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      grid-column: 6 / 7;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg);
+
+      @include mixins.border-menu;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 7 / 8;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &--notindex {
+    @media (min-width: $tablet-width) {
+      background-color: var(--bg-color);
+    }
+  }
 }
 
 .main-nav__toggle {
   border: none;
-  background-color: #cccccc;
+  background-image: url("../img/icons/menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
   width: 20px;
   height: 20px;
 
@@ -30,73 +68,64 @@
   top: 30px;
   right: 30px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-.main-nav__logo {
+.main-nav__wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 85px;
+  background-color: var(--bg);
 
-  @media (min-width: 768px) {
-    grid-column: 1/2;
+  @media (min-width: $tablet-width) {
+    display: contents;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../img/icons/burger-menu.svg");
+}
+
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: contents;
+  }
+}
+
+.no-js .main-nav__toggle {
+  display: none;
+}
+
+.no-js .main-nav__wrapper {
+  display: flex;
+  position: relative;
+  top: 0;
+
+  @media (min-width: $tablet-width) {
+    display: contents;
+  }
+}
+
+.main-nav__logo {
+  @include mixins.padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     justify-content: start;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  @media (min-width: 1150px) {
-    grid-column: 2/3;
-    justify-content: start;
-  }
-}
-
-.main-nav__site-nav {
-  @media (min-width: 768px) {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-
-  @media (min-width: 1150px) {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-}
-
-.main-nav__search {
-  @media (min-width: 768px) {
-    grid-column: 2/3;
-    justify-self: center;
-  }
-
-  @media (min-width: 1150px) {
-    grid-column: 3/4;
-  }
-}
-
-.main-nav__cart {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
-  color: var(--text-color);
-  text-decoration: none;
-
-  padding-top: 25px;
-  padding-bottom: 25px;
-
-  @media (min-width: 768px) {
-    grid-column: 3/4;
-    justify-self: end;
-    align-self: center;
-    padding-left: 85px;
-    padding-top: 33px;
-    padding-bottom: 33px;
-  }
-
-  @media (min-width: 1150px) {
-    grid-column: 4/5;
+  @media (min-width: $desktop-width) {
+    grid-column: 4 / 5;
   }
 }
 
@@ -107,24 +136,15 @@
   line-height: 24px;
   color: var(--text-body);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
     display: block;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    justify-self: end;
-    margin-top: 0;
-    margin-bottom: 0;
+    text-align: right;
     align-self: center;
   }
 
-  @media (min-width: 1150px) {
-    grid-column: 4/5;
-  }
-}
-
-.main-nav__additional-nav {
-  @media (min-width: 1150px) {
-    grid-column: 1/2;
-    grid-row: 2/3;
+  @media (min-width: $desktop-width) {
+    grid-column: 6 / 7;
   }
 }

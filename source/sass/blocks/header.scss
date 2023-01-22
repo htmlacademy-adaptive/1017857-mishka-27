@@ -1,7 +1,6 @@
-.header {
-  background-color: var(--text-color-light);
+@use "../breakpoints" as *;
 
-  @media (min-width: 768px) {
-    background: linear-gradient(to bottom, var(--bg), var(--bg) 90px, var(--bg-color) 90px, var(--bg-color) 100% );
-  }
+.header {
+  min-height: 85px;
+  position: relative;
 }

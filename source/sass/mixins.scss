@@ -1,15 +1,17 @@
+@use "breakpoints" as *;
+
 @mixin title {
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
   color: var(--text-color);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 43px;
     line-height: 50px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     font-size: 53px;
     line-height: 57px;
   }
@@ -21,13 +23,31 @@
   line-height: 30px;
   color: var(--text-color);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 43px;
     line-height: 50px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     font-size: 53px;
     line-height: 57px;
+  }
+}
+
+@mixin padding-mobile {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin padding-tablet {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@mixin border-menu {
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   }
 }

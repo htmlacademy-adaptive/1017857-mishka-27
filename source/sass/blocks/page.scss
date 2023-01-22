@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .page {
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 400;
@@ -5,23 +7,12 @@
   font-size: 13px;
   line-height: 30px;
   color: var(--text-body);
-  margin: 0;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
 
 .page__body {
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0;
-}
-
-.page__header {
-  padding-left: 30px;
-  padding-right: 30px;
-
-  @media (min-width: 768px) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }

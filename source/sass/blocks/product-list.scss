@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .product-list {
   display: flex;
   flex-direction: column;
@@ -7,13 +9,17 @@
   padding-left: 30px;
   padding-top: 30px;
 
-  @media (min-width: 768px) {
-    padding-left: 50px;
-    padding-right: 50px;
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    padding-top: 65px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
+    padding-top: 110px;
     flex-direction: row;
-    justify-content: center;
+    gap: 50px;
+    //justify-content: space-between;
   }
 }

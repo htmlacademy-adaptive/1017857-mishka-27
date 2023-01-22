@@ -1,3 +1,6 @@
+@use "../mixins";
+@use "../breakpoints" as *;
+
 .site-nav {
   list-style: none;
 
@@ -7,44 +10,75 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
     flex-direction: row;
-    justify-content: start;
-    gap: 35px;
+    gap: 30px;
   }
 
-  @media (min-width: 1150px) {
-    gap: 70px;
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    flex-direction: row;
+    gap: 0;
+    background-color: var(--bg);
+
+    @include mixins.border-menu;
   }
 }
 
 .site-nav__item {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @include mixins.border-menu;
+  @include mixins.padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: start;
+    box-shadow: none;
+  }
+}
+
+.site-nav__item:first-child .site-nav__link {
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 .site-nav__link {
   font-size: 17px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 24px;
   color: var(--text-color);
   text-decoration: none;
 
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 215px;
+  padding-left: 45px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 15px;
-    line-height: 24px;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: max-content;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop-width) {
     font-size: 17px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }

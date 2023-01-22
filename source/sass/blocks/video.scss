@@ -8,11 +8,13 @@
   margin-right: 30px;
   margin-top: 30px;
   margin-bottom: 60px;
+  border: 1px solid var(--border-light);
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,6 +39,8 @@
   @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
+
+    font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,6 +80,10 @@
 .video__content {
   height: 150px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 455px;
+  }
 }
 
 .video__play {
@@ -100,6 +108,9 @@
   @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
+
+    font-size: 15px;
+    line-height: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -117,12 +128,13 @@
   @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 5/7;
     align-self: end;
-    margin-bottom: 0;
+    margin-bottom: 60px;
     margin-left: 60px;
     margin-right: 60px;
   }

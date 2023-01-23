@@ -7,7 +7,7 @@
     "autoprefixer": "10.4.0",
     "browser-sync": "2.27.7",
     "csso": "5.0.5",
-    "del": "^7.0.0",
+    "del": "6.0.0",
     "gulp": "4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-htmlmin": "5.0.1",
@@ -27,7 +27,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "gulp build",
     "start": "gulp"
   },
   "browserslist": [

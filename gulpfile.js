@@ -3,15 +3,15 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
-import nunjucksRender from 'gulp-nunjucks-render';
-import htmlmin from 'gulp-htmlmin';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import {deleteAsync} from 'del';
-import csso from 'postcss-csso';
-import rename from 'gulp-rename';
+import browser from 'browser-sync';
+import nunjucksRender from 'gulp-nunjucks-render';
+import htmlmin from 'gulp-htmlmin';
+import del from 'del';
 
 
 // Styles
@@ -67,12 +67,11 @@ const copyImages = () => {
 
 // WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
-    .pipe(gulp.dest('source/img'))
     .pipe(gulp.dest('build/img'))
 }
 
@@ -107,7 +106,9 @@ const copy = (done) => {
 }
 
 // Clean
-const clean = await deleteAsync(['build']);
+const clean = () => {
+  return del('build');
+};
 
 // Server
 
@@ -141,25 +142,28 @@ const watcher = () => {
 // Build
 
 export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(styles, html, svg, sprite, createWebp),
-);
+    clean,
+    copy,
+    optimizeImages,
+    gulp.parallel(styles, html, svg, sprite, createWebp),
+  );
+
+
 // Default
 
 export default gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
-    html,
-    svg,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  ));
+    clean,
+    copy,
+    copyImages,
+    gulp.parallel(
+      styles,
+      html,
+      svg,
+      sprite,
+      createWebp
+    ),
+    gulp.series(
+      server,
+      watcher
+    )
+  );

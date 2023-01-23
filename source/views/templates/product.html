@@ -10,7 +10,14 @@
       <dt class="product__term">Высота:</dt>
       <dd class="product__value">15 см</dd>
     </dl>
-    <img class="product__img" width="260" height="315" src="img/content/triple-set-mobil.jpg" alt="Набор из трех вязаных корзинок">
+    <picture class="product__picture">
+      <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop.webp 1x, img/content/triple-set-desktop@2x.webp 2x" type="image/webp">
+      <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet.webp 1x, img/content/triple-set-tablet@2x.webp 2x" type="image/webp">
+      <source srcset="img/content/triple-set-mobil.webp 1x, img/content/triple-set-mobil@2x.webp 2x" type="image/webp">
+      <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+      <img class="product__img" width="260" height="315" src="img/content/triple-set-mobil.jpg" srcset="img/content/triple-set-mobil@2x.jpg 2x" alt="Набор из трех вязаных корзинок">
+    </picture>
     <p class="product__price">Цена: 990 руб.</p>
     <a class="product__button button button--primary" href="#">Заказать</a>
   </article>

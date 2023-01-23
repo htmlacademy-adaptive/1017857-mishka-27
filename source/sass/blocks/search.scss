@@ -27,8 +27,6 @@
   background-color: transparent;
   border: none;
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
   padding-left: 0;
   padding-right: 0;
 
@@ -59,9 +57,7 @@
 
 .search__icon {
   position: absolute;
-  top: 50%;
   left: 0;
-  transform: translate(0, -50%);
 
   @media (min-width: $tablet-width) {
     position: relative;

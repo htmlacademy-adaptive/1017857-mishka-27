@@ -13,6 +13,8 @@
   @media (min-width: $tablet-width) {
     background-color: var(--bg);
     justify-content: start;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {

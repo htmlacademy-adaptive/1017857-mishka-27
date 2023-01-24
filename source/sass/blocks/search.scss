@@ -27,10 +27,9 @@
   background-color: transparent;
   border: none;
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
   padding-left: 0;
   padding-right: 0;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     width: 85px;
@@ -51,6 +50,8 @@
   display: block;
   width: 215px;
   padding-left: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -59,9 +60,7 @@
 
 .search__icon {
   position: absolute;
-  top: 50%;
   left: 0;
-  transform: translate(0, -50%);
 
   @media (min-width: $tablet-width) {
     position: relative;

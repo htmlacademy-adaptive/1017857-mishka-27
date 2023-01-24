@@ -57,7 +57,7 @@
 
 .main-nav__toggle {
   border: none;
-  background-image: url("../img/icons/menu-close.svg");
+  background-image: url("../img/common/menu-close.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: transparent;
@@ -88,7 +88,7 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  background-image: url("../img/icons/burger-menu.svg");
+  background-image: url("../img/common/burger-menu.svg");
 }
 
 .main-nav--closed .main-nav__wrapper {

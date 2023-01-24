@@ -21,7 +21,7 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
     background-color: var(--bg-color);
   }
 }

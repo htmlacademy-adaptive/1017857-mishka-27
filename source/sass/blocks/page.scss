@@ -14,5 +14,9 @@
 
 .page__body {
   min-width: $mobile-width;
-  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }

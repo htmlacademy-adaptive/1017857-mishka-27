@@ -29,6 +29,7 @@
   position: relative;
   padding-left: 0;
   padding-right: 0;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     width: 85px;
@@ -49,6 +50,8 @@
   display: block;
   width: 215px;
   padding-left: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     display: none;

@@ -29,13 +29,6 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-//HTML
-const html = () => {
-  return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
-}
-
 // Views
 
 const views = () => {
@@ -48,10 +41,17 @@ const views = () => {
       },
     }))
     .pipe(gulp.dest('source'))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'))
     .pipe(browser.stream());
 }
 
 //Scripts
+const scripts = () => {
+  return gulp.src('source/js/scripts.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
 
 //Images
 const optimizeImages = () => {
@@ -124,19 +124,12 @@ const server = (done) => {
   done();
 }
 
-// Reload
-
-const reload = (done) => {
-  browser.reload();
-  done();
-}
-
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/views/**/*.html', gulp.series(views));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/js/script.js', gulp.series(scripts));
 }
 
 // Build
@@ -145,7 +138,7 @@ export const build = gulp.series(
     clean,
     copy,
     optimizeImages,
-    gulp.parallel(styles, html, svg, sprite, createWebp),
+    gulp.parallel(styles, views, scripts, svg, sprite, createWebp),
   );
 
 
@@ -157,7 +150,8 @@ export default gulp.series(
     copyImages,
     gulp.parallel(
       styles,
-      html,
+      views,
+      scripts,
       svg,
       sprite,
       createWebp

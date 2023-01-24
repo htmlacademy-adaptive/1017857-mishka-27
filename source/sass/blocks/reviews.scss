@@ -51,11 +51,16 @@
     grid-column: 1 / 4;
     display: grid;
     grid-template-columns: 50px repeat(4, 1fr) 50px;
-    background-image: url("../img/common/review.jpg");
+    background-image: url("../img/common/review@1x.jpg");
     background-position-x: 0;
     background-repeat: no-repeat;
     padding-top: 80px;
     padding-bottom: 40px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/common/review@2x.jpg");
+      background-size: contain;
+    }
   }
 
   @media (min-width: $desktop-width) {

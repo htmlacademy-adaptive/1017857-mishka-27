@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 50px repeat(6, 1fr) 50px;
+    grid-template-columns: 1fr repeat(6, 175px) 1fr;
   }
 }
 
@@ -49,7 +49,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 9;
-    grid-template-columns: 50px repeat(6, 1fr) 50px;
+    grid-template-columns: 1fr repeat(6, 175px) 1fr;
   }
 
   &--dark {

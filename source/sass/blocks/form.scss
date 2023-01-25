@@ -176,7 +176,7 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 0;
     width: 20%;
   }
@@ -190,13 +190,19 @@
 .form__item {
   display: flex;
   flex-direction: column;
+  padding: 5px;
 
   &--radio {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   &--check {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
+  }
+
+  &:focus-within {
+
+    outline: 1px solid #000000;
   }
 }
 
@@ -221,6 +227,19 @@
     display: block;
     width: 38px;
     height: 38px;
+    border: 2px solid var(--text-color);
+  }
+
+  &--radio:hover::before,
+  &--check:hover::before,
+  &--radio:focus::before,
+  &--check:focus::before {
+    border: 2px solid var(--accent-color-dark);
+  }
+
+  &--radio:active::before,
+  &--check:active::before {
+    opacity: 0.3;
     border: 2px solid var(--text-color);
   }
 
@@ -254,17 +273,21 @@
   left: 21px;
   transform: translate(-50%, -50%);
 
-  background-image: url("../img/icons/tick.svg");
+  background-image: url("../img/common/tick.svg");
   background-position: 50% 50%;
 }
 
 .form__item-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -273,6 +296,29 @@
     align-items: center;
     gap: 15px;
   }
+
+  &:hover .form__icon {
+    opacity: 1;
+    fill: #62d1ba;
+  }
+
+  &:focus .form__icon {
+    opacity: 1;
+    fill: #62d1ba;
+  }
+
+  &:active .form__icon {
+    opacity: 1;
+    fill: #62d1ba;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  opacity: 0.2;
 }
 
 .form__input-text {
@@ -284,12 +330,27 @@
   width: 100%;
 
   border: none;
-  //box-shadow: inset 0 -2px 0 var(--text-color);
   border-bottom: 2px solid var(--text-color);
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 18px;
 
   &::placeholder {
-    color: var(--accent-color);
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    border-bottom: 2px solid #62d1ba;
   }
 }
 
@@ -307,6 +368,18 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 6;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+
+  &:active {
+    border: 2px solid #62d1ba;
   }
 }
 

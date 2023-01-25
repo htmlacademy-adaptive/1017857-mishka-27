@@ -64,6 +64,18 @@
   width: 215px;
   padding-left: 45px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 15px;
     padding-top: 20px;

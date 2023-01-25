@@ -2,9 +2,9 @@
   <nav class="main-nav no-js main-nav--closed{{' main-nav--notindex' if pageSlug != 'home'}}">
     <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
     <a class="main-nav__logo logo" href="index.html">
-      <picture>
-        <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg">
+      <picture class="logo__picture">
+        <source width="149" height="72" media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg">
+        <source width="113" height="46" media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg">
         <img width="86" height="35" src="img/content/mishka-logo-mobile.svg" alt="Логотип магазина Машка">
       </picture>
     </a>
@@ -19,19 +19,19 @@
       </ul>
       <div class="search">
         <a class="search__button" href="#">
-          <svg class="search__icon" width="18" height="18" viewBox="0 0 18 18" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search__icon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
             <use href="img/sprite.svg#search"></use>
           </svg>
           <span class="search__label">Поиск по сайту</span>
         </a>
       </div>
       <a class="cart" href="#">
-        <span class="cart__label">
-          <svg class="cart__icon" width="21" height="18" viewBox="0 0 21 18" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+        <p class="cart__label">
+          <svg class="cart__icon" width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
             <use href="img/sprite.svg#cart"></use>
           </svg>
-          Корзина: пока пуста
-        </span>
+          <span class="cart__text">Корзина: пока пуста</span>
+        </p>
       </a>
     </div>
     <ul class="additional-nav">

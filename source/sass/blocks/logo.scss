@@ -7,6 +7,7 @@
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  color: var(--text-color);
 
   @include mixins.border-menu;
 
@@ -21,4 +22,28 @@
     padding-right: 50px;
     justify-content: center;
   }
+}
+
+.logo__img:hover {
+  color: #46c1ae;
+}
+
+.logo__img:focus {
+  color: #46c1ae;
+}
+
+.logo__img:active {
+  opacity: 0.2;
+}
+
+.logo__picture:hover {
+  opacity: 0.6;
+}
+
+.logo__picture:focus {
+  opacity: 0.6;
+}
+
+.logo__picture:active {
+  opacity: 0.3;
 }

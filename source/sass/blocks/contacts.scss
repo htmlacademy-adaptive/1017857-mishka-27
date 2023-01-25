@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 50px repeat(6, 1fr) 50px;
+    grid-template-columns: 1fr repeat(6, 175px) 1fr;
     padding-top: 70px;
     padding-bottom: 105px;
   }
@@ -106,6 +106,25 @@
   color: var(--text-body);
   text-decoration: none;
   font-style: normal;
+
+  &--email {
+    border-bottom: 1px solid #62d1ba;
+  }
+
+  &--email:hover {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+
+  &--email:focus {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+
+  &--email:active {
+    color: #46c1ae;
+    border-bottom: 1px solid rgba(70, 193, 174, 0.1);
+  }
 }
 
 .contacts__map {

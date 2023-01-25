@@ -10,11 +10,11 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 85px;
-    //margin-bottom: 85px;
     grid-template-columns: 50px 1fr 50px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1050px 1fr;
     padding-top: 80px;
     padding-bottom: 85px;
   }
@@ -183,6 +183,18 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

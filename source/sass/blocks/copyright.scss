@@ -13,6 +13,21 @@
   align-items: center;
   gap: 25px;
   text-decoration: none;
+
+  &:hover .copyright__logo {
+    opacity: 1;
+    fill: #46c1ae;
+  }
+
+  &:focus .copyright__logo {
+    opacity: 1;
+    fill: #46c1ae;
+  }
+
+  &:active .copyright__logo {
+    opacity: 0.3;
+    fill: #46c1ae;
+  }
 }
 
 .copyright__text {

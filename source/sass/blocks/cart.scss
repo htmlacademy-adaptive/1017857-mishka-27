@@ -42,11 +42,35 @@
   position: relative;
   padding-left: 45px;
   width: 215px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
     width: auto;
     padding-left: 85px;
     padding-right: 0;
+  }
+
+  &:hover .cart__text {
+    opacity: 0.6;
+  }
+
+  &:focus .cart__text {
+    opacity: 0.6;
+  }
+
+  &:hover .cart__icon {
+    opacity: 1;
+    fill: #63d1bb;
+  }
+
+  &:focus .cart__icon {
+    opacity: 1;
+    fill: #63d1bb;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -55,6 +79,7 @@
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
+  opacity: 0.2;
 
   @media (min-width: $tablet-width) {
     left: 35px;

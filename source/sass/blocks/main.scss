@@ -4,12 +4,17 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 
   &--page {
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: 50px 1fr 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 1fr 1050px 1fr;
     }
   }
 }

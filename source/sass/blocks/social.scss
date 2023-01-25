@@ -23,4 +23,18 @@
   align-items: center;
   color: var(--icon-color);
   text-decoration: none;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:focus {
+    opacity: 1;
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: #46c1ae;
+  }
 }

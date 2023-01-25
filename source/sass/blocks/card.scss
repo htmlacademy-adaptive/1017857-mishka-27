@@ -12,8 +12,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 25px 1fr 25px;
+    grid-template-columns: 25px 265px 25px;
     grid-template-rows: min-content;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -57,6 +69,18 @@
       font-size: 20px;
       line-height: 24px;
     }
+  }
+
+  &--title:hover {
+    opacity: 0.6;
+  }
+
+  &--title:focus {
+    opacity: 0.6;
+  }
+
+  &--title:active {
+    opacity: 0.3;
   }
 
   &--img {
@@ -147,4 +171,20 @@
   height: 20px;
   color: var(--text-color);
   text-decoration: none;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    color: #63d1bb;
+  }
+
+  &:focus {
+    opacity: 1;
+    color: #63d1bb;
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: #63d1bb;
+  }
 }

@@ -1,9 +1,14 @@
 @use "../breakpoints" as *;
 
 .footer {
+  background-color: var(--bg-color);
+}
+
+.footer__wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color);
+  max-width: 1050px;
+  margin: 0 auto;
 
   padding-left: 30px;
   padding-right: 30px;

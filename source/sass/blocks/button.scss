@@ -9,6 +9,7 @@
   text-transform: uppercase;
   text-align: center;
   box-sizing: border-box;
+  cursor: pointer;
 
   display: block;
   padding-top: 16px;
@@ -21,6 +22,20 @@
   &--primary {
     border: 2px solid var(--text-body);
     background-color: var(--text-color-light);
+  }
+
+  &--primary:hover {
+    background-color: var(--text-body);
+    color: var(--text-color-light);
+  }
+
+  &--primary:focus {
+    background-color: var(--text-body);
+    color: var(--text-color-light);
+  }
+
+  &--primary:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &--secondary {

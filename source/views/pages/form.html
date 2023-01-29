@@ -10,7 +10,7 @@
     <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
     <div class="form__container">
       <fieldset class="form__field-set form__field-set--radio">
-        <legend class="form__caption">Тип</legend>
+        <legend class="form__caption form__caption--radio">Тип</legend>
         <div class="form__label-box form__label-box--radio">
           <label class="form__item form__item--radio">
             <input class="visually-hidden form__input-radio" type="radio" id="accessory" name="type" value="accessory" checked>
@@ -55,31 +55,31 @@
       </fieldset>
     </div>
     <div class="form__container">
-      <fieldset class="form__field-set">
-        <legend class="form__caption">ФИО</legend>
+      <fieldset class="form__field-set form__field-set--fio">
+        <legend class="form__caption form__caption--fio">ФИО</legend>
         <div class="form__label-box form__label-box--fio">
-          <div class="form__item-wrapper">
-            <label class="form__label" for="firstname">Имя:</label>
-            <input class="form__input-text" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя*" required>
+          <div class="form__item-wrapper form__item-wrapper--fio">
+            <label class="form__label form__label--fio" for="firstname">Имя:</label>
+            <input class="form__input-text form__input-text--fio" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя*" required>
           </div>
-          <div class="form__item-wrapper">
-            <label class="form__label" for="surname">Фамилия:</label>
-            <input class="form__input-text" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
+          <div class="form__item-wrapper form__item-wrapper--fio">
+            <label class="form__label  form__label--fio" for="surname">Фамилия:</label>
+            <input class="form__input-text form__input-text--fio" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
           </div>
-          <div class="form__item-wrapper">
-            <label class="form__label" for="patronymic">Отчество:</label>
-            <input class="form__input-text" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+          <div class="form__item-wrapper form__item-wrapper--fio">
+            <label class="form__label form__label--fio" for="patronymic">Отчество:</label>
+            <input class="form__input-text form__input-text--fio" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
           </div>
         </div>
       </fieldset>
     </div>
-    <div class="form__container form__container--dark">
+    <div class="form__container form__container--dark form__container--contacts">
       <fieldset class="form__field-set form__field-set--phone">
         <legend class="form__caption">Тел</legend>
         <div class="form__label-box form__label-box--phone">
           <label class="visually-hidden" for="phone">Телефон:</label>
           <div class="form__item-wrapper form__item-wrapper--phone">
-            <input class="form__input-text" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <input class="form__input-text form__input-text--phone" type="text" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             <svg class="form__icon form__icon--phone" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#phone"></use>
             </svg>
@@ -87,11 +87,11 @@
         </div>
       </fieldset>
       <fieldset class="form__field-set form__field-set--email">
-        <legend class="form__caption">E-mail</legend>
+        <legend class="form__caption form__caption--email">E-mail</legend>
         <div class="form__label-box form__label-box--email">
           <label class="visually-hidden" for="email">E-mail:</label>
           <div class="form__item-wrapper form__item-wrapper--email">
-            <input class="form__input-text" type="email" name="email" id="email" placeholder="Ваш Email*">
+            <input class="form__input-text form__input-text--email" type="email" name="email" id="email" placeholder="Ваш Email*">
             <svg class="form__icon form__icon--email" width="32" height="21" viewBox="0 0 32 21" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#mail"></use>
             </svg>
@@ -99,11 +99,11 @@
         </div>
       </fieldset>
     </div>
-    <div class="form__container">
+    <div class="form__container form__container--message">
       <fieldset class="form__field-set form__field-set--message">
         <legend class="form__caption">Доп</legend>
         <label class="visually-hidden" for="message">Сообщение:</label>
-        <textarea class="form__input-textarea" id="message" name="message" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <textarea class="form__input-textarea" id="message" name="message" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
     </div>
     <div class="form__container form__container--bottom">

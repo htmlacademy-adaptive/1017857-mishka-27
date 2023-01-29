@@ -2,13 +2,16 @@
 @use "../breakpoints" as *;
 
 .about {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 40px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 50px repeat(4, 1fr) 50px;
-    padding-top: 30px;
-    padding-bottom: 80px;
+    padding-top: 55px;
+    padding-bottom: 70px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -16,8 +19,8 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr repeat(6, 175px) 1fr;
-    padding-top: 70px;
-    padding-bottom: 90px;
+    padding-top: 75px;
+    padding-bottom: 45px;
   }
 }
 
@@ -25,16 +28,16 @@
   @include mixins.subtitle;
 
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 6;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 7;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
   }
 }
 
@@ -42,7 +45,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 5px;
 
   padding-left: 0;
   margin-top: 0;
@@ -55,12 +58,12 @@
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
     column-gap: 0;
-    row-gap: 55px;
+    row-gap: 35px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 7;
-    row-gap: 60px;
+    row-gap: 48px;
   }
 }
 
@@ -71,12 +74,20 @@
   color: var(--text-color);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 22px;
     padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 15px;
   }
 
   &::before {

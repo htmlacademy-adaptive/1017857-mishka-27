@@ -14,11 +14,18 @@
   padding-right: 30px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 30px;
 
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 25px;
+    padding-bottom: 35px;
   }
 }
 

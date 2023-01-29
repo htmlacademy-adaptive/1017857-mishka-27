@@ -14,12 +14,26 @@
     grid-column: 2 / 3;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 55px;
+    margin-top: 50px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
+    margin-bottom: 105px;
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -30,11 +44,11 @@
   color: var(--text-color);
 
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
 
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 25px;
@@ -43,12 +57,15 @@
   @media (min-width: $tablet-width) {
     margin-left: 40px;
     margin-right: 40px;
-
+    padding-top: 40px;
+    padding-bottom: 25px;
     font-size: 20px;
+    gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 5/7;
+    padding-top: 50px;
     margin-left: 60px;
     margin-right: 60px;
     flex-direction: column;
@@ -58,17 +75,22 @@
   &::before {
     content: "";
     display: block;
-    width: 42px;
+    width: 60px;
     height: 22px;
     background-image: url("../img/common/video.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 35px;
+      height: 22px;
+    }
   }
 }
 
 .video__wrapper {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +103,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / 5;
     grid-row: 1 / 4;
+    justify-content: start;
   }
 }
 
@@ -90,6 +113,10 @@
 
   @media (min-width: $tablet-width) {
     height: 455px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 682px;
   }
 }
 
@@ -109,6 +136,11 @@
   transform: translate(-50%, -50%);
   padding: 0;
 
+  @media (min-width: $desktop-width) {
+    top: 51%;
+    left: 49%;
+  }
+
   &:hover {
     transform: translate(-50%, -50%) scale(1.2, 1.2);
   }
@@ -119,6 +151,7 @@
 
   &:active {
     transform: translate(-50%, -50%) scale(0.8, 0.8);
+    opacity: 0.3;
   }
 }
 
@@ -127,8 +160,8 @@
 
   margin-top: 0;
   margin-bottom: 40px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
 
   @media (min-width: $tablet-width) {
     margin-left: 40px;
@@ -147,8 +180,8 @@
 
 .video__button {
   margin-bottom: 30px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 30px;
+  margin-right: 30px;
 
   @media (min-width: $tablet-width) {
     margin-left: 40px;
@@ -159,8 +192,8 @@
   @media (min-width: $desktop-width) {
     grid-column: 5/7;
     align-self: end;
-    margin-bottom: 60px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-bottom: 57px;
+    margin-left: 65px;
+    margin-right: 55px;
   }
 }

@@ -27,16 +27,27 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 75px;
-  padding-bottom: 75px;
+  padding-bottom: 70px;
 }
 
 .main--page .main__title {
+  width: 100%;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
 
     display: grid;
-    line-height: 180px;
-    padding: 0;
+    line-height: 50px;
+    padding-top: 35px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 125px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+    min-height: 145px;
   }
 
   &::after {

@@ -1,3 +1,5 @@
+@use "../breakpoints" as *;
+
 .copyright {
   display: flex;
   justify-content: center;
@@ -13,6 +15,14 @@
   align-items: center;
   gap: 25px;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+  }
 
   &:hover .copyright__logo {
     opacity: 1;

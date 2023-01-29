@@ -3,7 +3,7 @@
 .product-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 27px;
 
   padding-right: 30px;
   padding-left: 30px;
@@ -11,13 +11,14 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
-    padding-top: 65px;
+    padding-top: 80px;
     padding-left: 0;
     padding-right: 0;
+    gap: 53px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 110px;
+    padding-top: 132px;
     flex-direction: row;
     gap: 50px;
     justify-content: space-between;

@@ -5,17 +5,18 @@
   display: grid;
   grid-template-columns: 30px 1fr 30px;
   position: relative;
-  padding-bottom: 45px;
-  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
     padding-bottom: 85px;
     grid-template-columns: 50px 1fr 50px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1050px 1fr;
-    padding-top: 80px;
+    padding-top: 45px;
     padding-bottom: 85px;
   }
 
@@ -54,8 +55,8 @@
     background-image: url("../img/common/review@1x.jpg");
     background-position-x: 0;
     background-repeat: no-repeat;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 85px;
+    padding-bottom: 55px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/common/review@2x.jpg");
@@ -66,6 +67,8 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-template-columns: repeat(6, 1fr);
+    padding-top: 75px;
+    padding-bottom: 105px;
   }
 }
 
@@ -122,11 +125,11 @@
   font-size: 15px;
 
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -161,7 +164,6 @@
   display: flex;
   margin-bottom: 40px;
 
-
   @media (min-width: $tablet-width) {
     grid-column: 4 / 5;
     grid-row: 2 / 3;
@@ -183,6 +185,7 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    height: 45px;
   }
 
   &:hover {

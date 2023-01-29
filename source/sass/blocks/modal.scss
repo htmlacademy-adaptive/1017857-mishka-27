@@ -89,6 +89,11 @@
   flex-grow: 1;
   padding: 18px 22px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
   &:hover .modal__text::after {
     outline: 2px solid rgba(68, 68, 68, 0.3);
   }
